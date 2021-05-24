@@ -12,6 +12,13 @@
     <h1>You are currently in <%= name %> subreddit</h1>
     <h2><%= description %></h2>
     <p>Our Current Subscribers: <%= subscribers %></p>
+    <hr>
+
+    <% for(let post of posts) {%>
+    <article>
+        <p><%= post.title %> - <b> <%= post.author %></b></p>
+    </article>
+    <% } %>
 </body>
 
 </html>
