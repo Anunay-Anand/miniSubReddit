@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
 
     //Sending an view file as response after rendering to html file
     //It by default looks in views folder thus only filename Required
-    res.render('home.ejs');
+    res.render('home.ejs', {subreddit: 'homepage'});
 });
 
 app.get('/r/:subreddit', (req, res) => {
@@ -51,12 +51,12 @@ app.get('/random', (req, res) => {
     //passing num variable by storing a random num as an obj
     const num = Math.floor((Math.random() * 10) + 1);
     //We generally pass both key and value pair with same name
-    res.render("random.ejs", {num: num});
+    res.render("random.ejs", {num: num, subreddit: 'random'});
 });
 
 app.get('/cats', (req, res) => {
     const cats = ['monty', 'rasberry', 'tom', 'walter', 'nilofer'];
-    res.render('cats.ejs', {cats: cats});
+    res.render('cats.ejs', {cats: cats, subreddit: 'cats'});
 });
 
 //Start your server
