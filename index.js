@@ -13,6 +13,9 @@ const path = require('path');
 
 const redditData = require('./data.json');
 
+//Serving our static files
+app.use(express.static(path.join(__dirname, '/public')));
+
 //Set EJS to be the view engine
 app.set('view engine', 'ejs');
 
@@ -40,7 +43,7 @@ app.get('/r/:subreddit', (req, res) => {
     if(data){
     res.render('subreddit.ejs', {...data, subreddit: subreddit});
     } else {
-        res.render('not found.ejs', {subreddit: subreddit});
+        res.render('notfound.ejs', {subreddit: subreddit});
     }
 });
 
