@@ -13,7 +13,7 @@ const path = require('path');
 
 const redditData = require('./data.json');
 
-//Serving our static files
+// Serving our static files
 app.use(express.static(path.join(__dirname, '/public')));
 
 //Set EJS to be the view engine

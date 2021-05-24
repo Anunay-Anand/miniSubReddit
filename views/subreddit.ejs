@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= subreddit %> </title>
     <!--Applying our style sheet from public directory-->
-    <link rel="stylesheet" href="/app.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
 </head>
 
 <body>
@@ -23,6 +23,8 @@
     <% if (post.img) {%>
     <img src="<%= post.img %>" alt="post-image">
     <% } } %>
+    <!--Adding Script file-->
+    <script src="/js/bootstrap.min.js"></script>
 </body>
 
 </html>
