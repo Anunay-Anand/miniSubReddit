@@ -37,7 +37,11 @@ app.get('/r/:subreddit', (req, res) => {
     const data = redditData[subreddit];
     //We always pass variable as an object but we can simply write its name too
     //If we pass an object is is passed an object thats it
+    if(data){
     res.render('subreddit.ejs', {...data, subreddit: subreddit});
+    } else {
+        res.render('not found.ejs', {subreddit: subreddit});
+    }
 });
 
 app.get('/random', (req, res) => {

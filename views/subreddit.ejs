@@ -18,7 +18,9 @@
     <article>
         <p><%= post.title %> - <b> <%= post.author %></b></p>
     </article>
-    <% } %>
+    <% if (post.img) {%>
+    <img src="<%= post.img %>" alt="post-image">
+    <% } } %>
 </body>
 
 </html>
